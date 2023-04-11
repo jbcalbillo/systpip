@@ -1,0 +1,27 @@
+Para configurar el sistema en el server, abra el archivo ost-config ubicado en include y edite las lineas del código:
+define('DBTYPE','mysql');
+define('DBHOST','localhost');
+define('DBNAME','NOMBRE DE TU BASE DE DATOS');
+define('DBUSER','USUARIO DE TU BD');
+define('DBPASS','PASSWORD DE TU BD');
+
+----------------------------------------------------------------------------------------------------------------------------
+
+Para cargar la base de datos, abra el archivo systpip.sql ubicado en la carpeta de sql y edite las líneas del código:
+-- Base de datos: `systpip`
+-- Base de datos: `AGREGAR EL NOMBRE DE LA BASE DE DATOS`
+Esta base debe coincidir con la base registrada en el archivo ost-config
+define('DBNAME','NOMBRE DE TU BASE DE DATOS');
+
+----------------------------------------------------------------------------------------------------------------------------
+
+Si se desea cambiar el nombre de la carpeta raiz (INSTALACIÓN LOCAL), favor de hacer lo siguiente:
+Abrir archivo systpip.sql y reemplazar "systpip" por el nombre de la carpeta raiz, ejemplo:
+
+(2, 'core', 'helpdesk_url', 'http://localhost/systpip/', '2023-03-08 18:14:35'),
+(103, 'plugin.1.instance.1', 'redirectUri', 'http://localhost/systpip/api/auth/oauth2', '2023-03-08 18:26:28'),
+
+(2, 'core', 'helpdesk_url', 'http://localhost/NOMBRE DE CARPETA/', '2023-03-08 18:14:35'),
+(103, 'plugin.1.instance.1', 'redirectUri', 'http://localhost/NOMBRE DE CARPETA/api/auth/oauth2', '2023-03-08 18:26:28'),
+
+---------------------------------------------------------------------------------------------------------------------------
